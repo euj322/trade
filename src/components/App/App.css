@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+
+/* === MAIN === */
+
+html {
+  --scrollbarBG: #50575a;
+  --thumbBG: #41bcc060;
+}
+
+body {
+  /* background-color: #c7c7b1; */
+  background-color: #313131;
+  /* font-family     : 'Syne Mono', monospace; */
+}
+
+/* .body.darkTheme { */
+  /* color: white; */
+  /* font-family     : 'Syne Mono', monospace; */
+/* } */
+
+.App {
+  /* height: 100vh; */
+  background-color: #c7c7b1;
+  font-family     : 'Syne Mono', monospace;
+  /* background-color: #313131; */
+}
+
+.App.darkTheme {
+  background-color: #313131;
+  color: white;
+  font-family     : 'Syne Mono', monospace;
+}
+
+.title {
+  background-color: rgb(98, 127, 128);
+  margin          : 0;
+  text-align      : center;
+  border-bottom   : 1px solid black;
+}
+
+.title.darkTheme {
+  background-color: rgb(51, 59, 59);
+  margin          : 0;
+  text-align      : center;
+  border-bottom   : 1px solid black;
+}
+
+.info {
+  margin     : .4rem;
+}
+
+.small {
+  font-size: small;
+}
+
+/* === BOXES === */
+
+body,
+.scrollable {
+  overflow-y: auto;
+  max-height: 100%;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+
+body::-webkit-scrollbar,
+.scrollable::-webkit-scrollbar {
+  width: 18px;
+}
+
+body::-webkit-scrollbar-track,
+.scrollable::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+
+body::-webkit-scrollbar-thumb,
+.scrollable::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG) ;
+  /* border-radius: 6px; */
+  border: 3px solid var(--scrollbarBG);
+}
+@media (max-width: 800px) {
+  body,
+  .scrollable {
+    overflow-y: auto;
+    /* max-height: unset; */
+    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+  }
+  
+  body::-webkit-scrollbar,
+  .scrollable::-webkit-scrollbar {
+    width: 18px;
+  }
+  
+  body::-webkit-scrollbar-track,
+  .scrollable::-webkit-scrollbar-track {
+    background: var(--scrollbarBG);
+  }
+  
+  body::-webkit-scrollbar-thumb,
+  .scrollable::-webkit-scrollbar-thumb {
+    background-color: var(--thumbBG) ;
+    /* border-radius: 6px; */
+    border: 3px solid var(--scrollbarBG);
+  }
+}
+
+.boxed {
+  border: 1px solid black;
+}
+
+.fit {
+  height: fit-content;
+}
+
+.divider {
+  background-color: black;
+  height: 1px;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.dark {
+  background-color: darkgrey;
+  border: none;
+}
+
+.dark.darkTheme {
+  background-color: rgb(70, 70, 70);
+  border: none;
+}
+
+/* === BUTTONS === */
+
+button.medium{
+  font-size:medium;
+}
+
+.btn-nav {
+  color: white;
+  font-size:larger;
+  background-color: #363535;
+  font-family     : inherit;
+  box-shadow      : inset 2px 2px #ffffff99, inset -2px -2px #00000099;
+}
+
+.btn-nav.selected {
+  color: black;
+  background-color: #ffffff;
+  font-family     : inherit;
+  box-shadow      : inset 2px 2px #ffffff99, inset -2px -2px #00000099;
+}
+
+.btn-nav:hover {
+  background-color: #615d5d;
+}
+
+.btn-nav.selected:hover {
+  background-color: #ffffff;
+}
+
+.btn-nav:focus {
+  /* remove annoying rounded blue outline when button is focused */
+  outline         : none;
+  /* change color when focused to resolve accessibility concerns */
+  background-color: #7e6f67d3;
+}
+
+.btn-nav.selected:focus {
+  /* remove annoying rounded blue outline when button is focused */
+  outline         : none;
+  /* change color when focused to resolve accessibility concerns */
+  background-color: #ffffff;
+}
+
+.btn-red {
+  background-color: #ec4141;
+  font-family     : inherit;
+  box-shadow      : inset 2px 2px #ffffff99, inset -2px -2px #00000099;
+}
+
+.btn-red.darkTheme {
+  background-color: #7c3434;
+  color: #ffffff;
+  font-family     : inherit;
+  box-shadow      : inset 2px 2px #ffffff99, inset -2px -2px #00000099;
+}
+
+.btn-red:hover {
+  background-color: lightcoral;
+}
+
+.btn-red.darkTheme:hover {
+  background-color: rgb(151, 80, 80);
+}
+
+.btn-red:focus {
+  /* remove annoying rounded blue outline when button is focused */
+  outline         : none;
+  /* change color when focused to resolve accessibility concerns */
+  background-color: #b8718c81;
+}
+
+.btn-green {
+  background-color: rgb(109, 145, 108);
+  font-family     : inherit;
+  box-shadow      : inset 2px 2px #ffffff99, inset -2px -2px #00000099;
+}
+
+.btn-green.darkTheme {
+  color: #ffffff;
+  background-color: rgb(84, 109, 83);
+  font-family     : inherit;
+  box-shadow      : inset 2px 2px #ffffff99, inset -2px -2px #00000099;
+}
+
+.btn-green:hover {
+  background-color: rgb(156, 180, 155);
+}
+
+.btn-green:focus {
+  /* remove annoying rounded blue outline when button is focused */
+  outline         : none;
+  /* change color when focused to resolve accessibility concerns */
+  background-color: rgba(128, 177, 159, 0.596);
+}
+
+.btn-blue {
+  background-color: rgb(108, 123, 145);
+  font-family     : inherit;
+  box-shadow      : inset 2px 2px #ffffff99, inset -2px -2px #00000099;
+}
+
+.btn-blue.darkTheme {
+  color: #ffffff;
+  background-color: rgb(48, 55, 66);
+  font-family     : inherit;
+  box-shadow      : inset 2px 2px #ffffff99, inset -2px -2px #00000099;
+}
+
+.btn-blue:hover {
+  background-color: rgb(155, 160, 180);
+}
+
+.btn-blue:focus {
+  /* remove annoying rounded blue outline when button is focused */
+  outline         : none;
+  /* change color when focused to resolve accessibility concerns */
+  background-color: #7773b398;
+}
+
+button:active {
+  box-shadow: inset -2px -2px #ffffff99, inset 2px 2px #00000099;
+}
+
+/* === INPUTS === */
+
+input {
+  background      : rgb(209, 202, 192);
+  /* color        : rgb(209, 202, 192); */
+  background-color: rgb(209, 202, 192);
+  font-family     : inherit;
+  /* width        : 100%; */
+  /* margin       : 0% .2%; */
+}
+
+input.darkTheme {
+  /* background      : rgb(240, 235, 229); */
+  /* color        : rgb(209, 202, 192); */
+  background-color: rgb(145, 145, 145);
+  font-family     : inherit;
+  /* width        : 100%; */
+  /* margin       : 0% .2%; */
+}
