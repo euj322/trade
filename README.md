@@ -1,5 +1,6 @@
 # Trade bot v 1.1
 
+# Attention: Antivirus may swear at the archive.
 
 # Profit from every market movement
 The Bot is a great ally in a fluctuating market - when the price moves the algorithm will automatically set Buy and Sell orders when there is a best opportunity to make a profit.
